@@ -18,4 +18,4 @@ class Digit(models.Model):
 
     def __str__(self):
         return f'Digit Is : {self.num}'
-        
+
