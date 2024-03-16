@@ -6,3 +6,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('counter/' , include('counter_app.urls'))
 ]
+
