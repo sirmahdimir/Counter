@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from .models import Digit
 
 # increase , decrease and reset counter:
@@ -18,4 +19,5 @@ def counter(request):
 
 
     return render (request , 'counter_app/counter_page.html', context={'num' : digit})
+
 
