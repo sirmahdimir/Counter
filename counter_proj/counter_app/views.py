@@ -17,7 +17,6 @@ def counter(request):
             if "increasment" in request.POST:
                 digit.increasment()
 
-
     return render (request , 'counter_app/counter_page.html', context={'num' : digit})
 
 
