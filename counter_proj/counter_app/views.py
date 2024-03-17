@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Digit
 
 # increase , decrease and reset counter:
@@ -7,15 +7,15 @@ def counter(request):
     
 
     if request.method == 'POST':
+            if "decreasment" in request.POST:
+                digit.decreasment()
 
-        if "decreasment" in request.POST:
-            digit.decreasment()
+            if "reset" in request.POST:
+                digit.reset()
 
-        if "reset" in request.POST:
-            digit.reset()
+            if "increasment" in request.POST:
+                digit.increasment()
 
-        if "increasment" in request.POST:
-            digit.increasment()
 
-    return render (request , 'counter_app/counter_page.html', context={'num' : digit})
+    return render(request , 'counter_app/counter_page.html', context={'num' : digit})
 
